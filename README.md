@@ -93,6 +93,6 @@ Essas métricas foram escolhidas para permitir uma avaliação tanto quantitativ
 
 ## Considerações Finais
 
-O projeto foi conduzido com foco em organização, reprodutibilidade e análise crítica dos resultados. A avaliação comparativa entre os modelos com diferentes resoluções de entrada permitiu observar o impacto do tamanho da imagem na capacidade de detecção e generalização.
+O projeto foi conduzido com foco em organização, reprodutibilidade e análise crítica dos resultados. A avaliação comparativa entre os modelos com diferentes resoluções de entrada permitiu observar o impacto do tamanho da imagem na capacidade de detecção e generalização. Embora o balanceamento de classes seja um fator importante para melhorar a robustez do modelo, optei por não reduzir o número de dados no dataset. Isso se deve à limitação de tempo disponível para a implementação. Dessa forma, não foi possível realizar uma comparação entre os resultados com classes balanceadas e desbalanceadas, o que seria uma etapa interessante para futuras análises.
 
-Para detalhes adicionais, consulte o relatório completo em PDF disponível neste repositório.
+Por fim, para detalhes adicionais consulte o relatório completo em PDF disponível nesse repositório.
