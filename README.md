@@ -8,7 +8,7 @@ O relatório completo, contendo todos os resultados e análises detalhadas, est�
 
 > **Observação:** Os dados utilizados no projeto foram removidos deste repositório para garantir a anonimização. Caso deseje acessar o notebook diretamente no Google Colab, utilize o link abaixo:
 >
-> 🔗 [Notebook no Google Colab]([(https://colab.research.google.com/drive/1iTwIhn1we2A7IEs5S9foHsu7ohFl99Bw)](https://drive.google.com/file/d/1iTwIhn1we2A7IEs5S9foHsu7ohFl99Bw/view?usp=sharing))
+> 🔗 [Notebook no Google Colab](https://drive.google.com/file/d/1iTwIhn1we2A7IEs5S9foHsu7ohFl99Bw/view?usp=sharing)
 
 ---
 
