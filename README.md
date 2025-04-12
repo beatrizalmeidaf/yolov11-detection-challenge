@@ -6,7 +6,7 @@ O relatório completo, contendo todos os resultados e análises detalhadas, est�
 
 📄 [Relatório Final - PDF](https://github.com/beatrizalmeidaf/yolov11-detection-challenge/blob/main/relatorio-beatrizalmeida-desafio-disbral.pdf)
 
-> **Observação:** Os dados utilizados no projeto foram removidos deste repositório para garantir a anonimização. Caso deseje acessar o notebook diretamente no Google Colab, utilize o link abaixo:
+> **Observação:** Os dados utilizados no projeto foram removidos desse repositório para garantir a anonimização. Caso deseje acessar o notebook diretamente no Google Colab, utilize o link abaixo:
 >
 > 🔗 [Notebook no Google Colab](https://drive.google.com/file/d/1iTwIhn1we2A7IEs5S9foHsu7ohFl99Bw/view?usp=sharing)
 
