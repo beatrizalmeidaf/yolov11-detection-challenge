@@ -1,48 +1,74 @@
-# Desafio Técnico Para Estágio em Machine Learning 🚀
+# Avaliação de Modelos YOLOv11 com Diferentes Resoluções para Detecção de Veículos
 
-Esse repositório contém a minha solução para o desafio técnico voltado para estágio em Machine Learning. O objetivo é treinar e analisar modelos de detecção de objetos utilizando o framework **YOLOv11**, com foco em diferentes configurações de pré-processamento de imagens.
+Esse repositório apresenta a solução para o desafio técnico de estágio em Machine Learning, com foco em detecção de objetos utilizando o framework **YOLOv11 (Ultralytics)**.
 
----
+O relatório completo, contendo todos os resultados e análises detalhadas, está disponível no link abaixo:
 
-## Contexto 📌
+📄 [Relatório Final - PDF](https://github.com/beatrizalmeidaf/yolov11-detection-challenge/blob/main/relatorio-beatrizalmeida-desafio-disbral.pdf)
 
-A tarefa proposta simula o desafio enfrentado por uma empresa fictícia que atua na avaliação de obras de infraestrutura de transportes. A ideia é desenvolver uma IA capaz de realizar **contagem volumétrica de veículos** em obras, auxiliando engenheiros nas decisões sobre melhorias e dimensionamento de pavimentos.
-
----
-
-## Objetivo 🎯
-
-- Treinar modelos de detecção com o **YOLOv11** utilizando imagens com diferentes resoluções:  
-  - **Modelo A:** 256x256  
-  - **Modelo B:** 512x512  
-  - **Modelo C:** 640x640  
-- Manter todos os outros parâmetros de treinamento constantes (épocas, batch size, otimizador, etc.)
-- Utilizar modelo pré-treinado com pesos atualizados durante o treinamento
-- Rodar cada modelo por pelo menos **50 épocas**
-- Comparar os modelos utilizando **três métricas de avaliação**
+> **Observação:** Os dados utilizados no projeto foram removidos deste repositório para garantir a anonimização. Caso deseje acessar o notebook diretamente no Google Colab, utilize o link abaixo:
+>
+> 🔗 [Notebook no Google Colab](https://drive.google.com/file/d/1iTwIhn1we2A7IEs5S9foHsu7ohFl99Bw/view?usp=sharing)
 
 ---
 
-## Métricas Escolhidas 
+## Objetivo do Projeto
 
-As métricas selecionadas para análise comparativa dos modelos foram:
+Treinar três modelos de detecção de objetos com diferentes resoluções de imagem de entrada (`imgsz`), mantendo todos os demais hiperparâmetros constantes, e compará-los por meio de métricas consistentes de avaliação.
 
-1. **F1 Score:**  
-   Combina precisão e revocação em uma única métrica, ideal para avaliar equilíbrio entre falsos positivos e falsos negativos, especialmente importante em problemas de detecção.
+Modelos:
 
-2. **Matriz de Confusão:**  
-   Ajuda a identificar como o modelo está classificando cada classe e onde ocorrem os maiores erros.
+- **Modelo A:** imgsz = 256x256  
+- **Modelo B:** imgsz = 512x512  
+- **Modelo C:** imgsz = 640x640  
 
-3. **PR Curve (Precision-Recall Curve):**  
-   Permite visualizar a troca entre precisão e revocação ao longo de diferentes thresholds de confiança, útil para entender melhor a performance dos modelos com múltiplas classes.
-
-Essas métricas foram escolhidas por oferecerem uma visão mais **qualitativa e interpretável** da performance dos modelos além dos números brutos.
+Todos os modelos foram treinados por 50 épocas com pesos pré-treinados.
 
 ---
 
-## Como Rodar o Projeto 
+## Estratégia de Treinamento
 
-1. Clone este repositório:
+- **Framework:** Ultralytics YOLOv11  
+- **Épocas:** 50  
+- **Dataset:** Fornecido pelo desafio (divisão 80/20)  
+- **Batch size, otimizador e taxa de aprendizado:** constantes  
+- **Execução:** Ambiente Google Colab com integração ao Google Drive  
+
+---
+
+## Métricas de Avaliação
+
+As métricas utilizadas para avaliação dos modelos foram:
+
+- **F1-score**
+- **Precision**
+- **Recall**
+- **mAP@50**
+- **mAP@50-95**
+
+Essas métricas foram escolhidas para permitir uma avaliação tanto quantitativa quanto qualitativa da performance dos modelos.
+
+---
+
+## Resultados Resumidos
+
+| Modelo | imgsz | F1-score | Precision | Recall | mAP@50 | mAP@50-95 |
+|--------|-------|----------|-----------|--------|--------|------------|
+| A      | 256   | 0.6468   | 0.7951    | 0.5451 | 0.5515 | 0.4088     |
+| B      | 512   | 0.7572   | 0.8419    | 0.6880 | 0.7432 | 0.6511     |
+| C      | 640   | 0.7572   | 0.9173    | 0.6447 | 0.7480 | 0.6880     |
+
+**Resumo das análises:**
+
+- O modelo com **512px** apresentou o melhor equilíbrio entre desempenho e custo computacional.
+- O modelo com **640px** alcançou o melhor resultado em mAP@50-95, indicando maior generalização.
+- O modelo com **256px** teve desempenho inferior, mas com menor custo de processamento.
+
+---
+
+## Como Executar o Projeto
+
+1. Clone o repositório:
    ```bash
    git clone https://github.com/beatrizalmeidaf/yolov11-detection-challenge.git
    cd yolov11-detection-challenge
@@ -58,27 +84,15 @@ Essas métricas foram escolhidas por oferecerem uma visão mais **qualitativa e 
    jupyter notebook
    ```
 
-4. Execute o notebook `YOLOv11_Detection_Challenge.ipynb`, que contém todo o código de pré-processamento, treinamento e análise comparativa dos modelos.
+4. Execute o notebook `YOLOv11_Detection_Challenge.ipynb` para visualizar o pipeline completo de pré-processamento, treinamento e avaliação.
+
+> **Importante:** Os dados utilizados nesse projeto foram removidos para garantir anonimização.  
+> Para executar o notebook com seus próprios dados, insira os arquivos na pasta apropriada do repositório, seguindo a mesma estrutura esperada pelo script. Certifique-se de ajustar os caminhos no notebook, se necessário.
 
 ---
 
-## Status do Projeto ⚠️
+## Considerações Finais
 
-Infelizmente, **não consegui concluir os treinamentos nem gerar os resultados** devido a **limitações de hardware** no meu ambiente local. Durante as execuções, o consumo de memória RAM foi muito alto, resultando em **crashes constantes do kernel**.
+O projeto foi conduzido com foco em organização, reprodutibilidade e análise crítica dos resultados. A avaliação comparativa entre os modelos com diferentes resoluções de entrada permitiu observar o impacto do tamanho da imagem na capacidade de detecção e generalização.
 
-Apesar disso, toda a estrutura do projeto foi implementada, incluindo:
-- Configuração do ambiente e dependências
-- Treinamento estruturado para os três modelos
-- Códigos prontos para gerar as análises comparativas
-
-Assim que eu tiver acesso a um ambiente com mais recursos, pretendo retomar e finalizar os experimentos.
-
----
-
-## Considerações Finais 
-
-Mesmo sem conseguir finalizar os treinamentos por limitações técnicas, me preocupei em estruturar o projeto de forma clara e organizada, seguindo boas práticas de codificação, documentação e análise.
-
-Agradeço pela oportunidade de participar do desafio! 
-
-Se houver qualquer dúvida ou sugestão, estou à disposição para conversar ou adaptar o projeto.
+Para detalhes adicionais, consulte o relatório completo em PDF disponível neste repositório.
