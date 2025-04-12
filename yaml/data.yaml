@@ -1,0 +1,18 @@
+# Train/val/test sets
+path: /content/drive/MyDrive/ml_challenge/yolo_project/data_train/dataset  # root directory
+train: train/  # train images (relative to 'path')
+val: val/  # val images (relative to 'path')
+test:  # test images (optional)
+
+# Classes
+names:
+  0: person
+  1: car
+  2: motorcycle
+  3: bus
+  4: truck
+  5: van
+  # adicione mais classes conforme necessário
+
+# Dataset information
+nc: 6  # número de classes
