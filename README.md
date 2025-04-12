@@ -64,6 +64,13 @@ Essas métricas foram escolhidas para permitir uma avaliação tanto quantitativ
 - O modelo com **640px** alcançou o melhor resultado em mAP@50-95, indicando maior generalização.
 - O modelo com **256px** teve desempenho inferior, mas com menor custo de processamento.
 
+
+## Exemplo de Classificação
+
+Abaixo é apresentado um exemplo visual do modelo realizando a detecção de veículos em uma imagem: 
+
+![Image](https://github.com/user-attachments/assets/e40b0e97-d1dd-4a01-af2a-299cdc8ca33d)
+
 ---
 
 ## Como Executar o Projeto
